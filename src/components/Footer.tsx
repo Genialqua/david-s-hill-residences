@@ -1,4 +1,13 @@
 import Logo from "./Logo";
+import { Instagram, Facebook, Linkedin, Twitter, MessageCircle } from "lucide-react";
+
+const socials = [
+  { label: "Instagram", href: "https://instagram.com/davidshill", Icon: Instagram },
+  { label: "Facebook", href: "https://facebook.com/davidshill", Icon: Facebook },
+  { label: "LinkedIn", href: "https://linkedin.com/company/davidshill", Icon: Linkedin },
+  { label: "Twitter / X", href: "https://twitter.com/davidshill", Icon: Twitter },
+  { label: "WhatsApp", href: "https://wa.me/2348000000000", Icon: MessageCircle },
+];
 
 const Footer = () => (
   <footer className="border-t border-border bg-background py-14">
@@ -8,6 +17,25 @@ const Footer = () => (
         <p className="mt-5 max-w-sm font-body text-sm leading-relaxed text-muted-foreground">
           An 8-storey luxury residence on Victoria Island, Lagos. Developed and delivered by 360 Distinct Real Estate.
         </p>
+
+        <div className="mt-7">
+          <p className="eyebrow mb-3">Follow</p>
+          <ul className="flex flex-wrap items-center gap-3">
+            {socials.map(({ label, href, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`David's Hill on ${label}`}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary hover:bg-primary/5"
+                >
+                  <Icon size={16} strokeWidth={1.6} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div>
