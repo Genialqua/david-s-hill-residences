@@ -9,7 +9,7 @@ const Logo = ({ className = "" }: LogoProps) => (
     <img
       src={logo}
       alt="David's Hill"
-      className="h-10 w-10 object-cover rounded-sm border border-border"
+      className="h-10 w-10 object-cover rounded-full border border-border"
       loading="eager"
     />
     <span className="font-display text-lg tracking-wide text-foreground">
